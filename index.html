@@ -6,324 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-DescarteCerto</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header id="header">
-        <img class="logo" src="assets/E-DescarteCertoC.png" alt="logo">
-        <div class="navigation">
-            <ul>
-                <li><a href="javascript:void(0)" onclick="scrollToSection('home')">Home</a></li>
-                <li><a href="javascript:void(0)" onclick="scrollToSection('sobre')">Sobre</a></li>
-                <li><a href="javascript:void(0)" onclick="scrollToSection('pontos')">Pontos de Coleta</a></li>
-                <li><a href="javascript:void(0)" onclick="scrollToSection('contato')">Contato</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logop">
+                <img src="assets/logo.png" alt="logo E-DescarteCerto" class="logo">
+                <p>E-DescarteCerto</p>
+            </div>
+
+            <input type="checkbox" id="hamburger-input">
+
+            <label for="hamburger-input" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#pontos">Pontos de Coletas</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contact">Dúvidas Frequentes</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-
     <main>
-        <section id="home" class="middle-container">
-            <div>
-                <h2 class="txt1"> O <span class="destaque">descarte correto</span> de lixos eletrônicos é de extrema
-                    importância para a <span class="destaque">preservação do meio ambiente e a saúde pública.</span>
-                </h2>
-            </div>
-
-            <div class="middle">
-                <img src="assets/Beneficios-de-reciclar-o-lixo-eletronico.webp" alt="">
-                <img src="assets/lixo1.jpg" alt="">
-                <img src="assets/lixo-eletrônico 1.jpg" alt="">
-                <img src="assets/man-g5d518fa85-1920.webp" alt="">
-            </div>
+        <section id="inicio" class="busca-container">
+            <p>Onde Descartar Seu <br> Lixo Eletrônico em Guarulhos?</p>
+            <input type="text" id="endereco-input" placeholder="Digite seu CEP ou endereço">
+            <button id="buscar-btn" class="search">
+                Procurar
+            </button>
         </section>
 
-        <section class="form-container">
-            <div>
-                <h2 class="info">+ Pontos de coleta</h2>
-                <form action="processar_formulario.php" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" name="name" placeholder="Digite o nome do local..." required>
-                        </div>
+        <div id="mapa"></div>
 
-                        <div class="form-group">
-                            <label for="nome">Endereço:</label>
-                            <input type="text" id="nome" name="endereco" placeholder="Digite o endereço..." required>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="cidade">Cidade:</label>
-                            <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade do local..."
-                                required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="estado">Estado:</label>
-                            <input type="text" id="estado" name="estado" placeholder="Digite o estado..." required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="telefone">Telefone:</label>
-                            <input type="text" id="telefone" name="telefone" placeholder="Digite o telefone do local..."
-                                required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">CEP:</label>
-                            <input type="text" id="endereco" name="cep" placeholder="Digite o CEP do local..." required>
-                        </div>
-
-                    </div>
-
-                    <div class="form-row-full">
-                        <label class="mensagem" for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Adicione alguma observação..."
-                            required></textarea>
-                    </div>
-
-                    <button type="submit" name="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="sobre" class="container-sobre">
-            <div class="sobre">
-                <p>Nosso site tem como principal objetivo promover a conscientização sobre a importância do descarte
-                    correto de lixo eletrônico e facilitar o acesso a informações sobre pontos de coleta em sua região.
-                    Com o crescimento constante da tecnologia, a quantidade de dispositivos eletrônicos descartados de
-                    forma inadequada vem aumentando, o que representa uma séria ameaça ao meio ambiente e à saúde
-                    pública. <br>
-                    <br>
-                    Equipamentos eletrônicos contêm substâncias perigosas, como chumbo, mercúrio e cádmio, que podem
-                    contaminar o solo e a água, causando danos irreversíveis ao ecossistema. Além disso, a queima
-                    incorreta desses materiais libera gases tóxicos, colocando em risco a saúde das comunidades
-                    próximas. <br>
-                    <br>
-                    Nosso site busca não apenas informar, mas também encorajar a reciclagem desses produtos, ajudando a
-                    recuperar recursos valiosos e a reduzir o impacto ambiental. Através da economia circular, os
-                    materiais podem ser reaproveitados, minimizando a extração de novos recursos e contribuindo para um
-                    futuro mais sustentável. <br>
-                    <br>
-                    É fundamental que cada pessoa entenda o papel que desempenha nessa causa. Fornecemos informações
-                    claras sobre como e onde descartar corretamente o lixo eletrônico, além de incentivar o envolvimento
-                    comunitário por meio da sugestão de novos pontos de coleta. Juntos, podemos fazer a diferença para
-                    preservar o meio ambiente e proteger as futuras gerações.
+            <div id="sobre" class="about">
+                <h2>Sobre Nós</h2>
+                <p>
+                    E-DescarteCerto é uma plataforma dedicada a ajudar os cidadãos de Guarulhos a encontrar pontos de coleta
+                    para descarte adequado de lixo eletrônico. Nosso objetivo é promover a conscientização ambiental e
+                    facilitar o acesso a informações sobre reciclagem e descarte responsável.
                 </p>
             </div>
 
-            <div class="img-p">
-                <img src="assets/vivo-explica-lixo-eletronico-residuos-2405-943x832.jpg" alt="" class="img-sobre1">
-                <img src="assets/poluicao-agua-e-waste.webp" alt="" class="img-sobre2">
-                <img src="assets/pilhas.jpg" alt="" class="img-sobre3">
-                <img src="assets/nationalgeographic2673645.jpg" alt="" class="img-sobre4">
-            </div>
-        </section>
 
-        <section id="pontos" class="coleta-container">
-            <h2>Pontos de coleta</h2>
-            <div class="tabela-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Todos os dias - das 7h às 19h</th>
-                        </tr>
+        <div class="descricao">
+            <p>O lixo eletrônico, ou e-lixo, é um dos problemas ambientais mais crescentes e perigosos da nossa era. Dispositivos como
+            celulares, computadores, TVs e baterias, quando descartados de forma incorreta, tornam-se uma verdadeira bomba-relógio
+            para o planeta e para a nossa saúde.<br><br>
+            
+            Impacto no Meio Ambiente: Esses aparelhos são feitos com uma mistura complexa de materiais, incluindo metais pesados e
+            substâncias tóxicas como mercúrio, chumbo, cádmio e berílio. Quando jogados em aterros comuns, esses componentes
+            venenosos vazam para o solo e contaminam os lençóis freáticos. Essa contaminação envenena ecossistemas inteiros,
+            afetando plantas, animais e a água que poderíamos consumir.<br><br>
+            
+            Impacto na Saúde Humana: A ameaça à nossa saúde é direta e grave. A exposição a esses metais pesados, seja pelo ar
+            (durante a queima inadequada) ou pela água e alimentos contaminados, está ligada a danos sérios e permanentes. O chumbo
+            pode causar problemas neurológicos, especialmente em crianças; o mercúrio afeta o cérebro e os rins; e o cádmio é
+            cancerígeno. Em muitos locais, o desmonte manual e sem proteção expõe trabalhadores a riscos imensos, criando um ciclo
+            de pobreza e doença. <br><br>
+            
+            Em resumo, o lixo eletrônico não é apenas "lixo". É um resíduo perigoso que exige descarte especializado para evitar que
+            seus componentes tóxicos comprometam a saúde do nosso planeta e de todos nós que vivemos nele.</p>
+        </div>
 
-                    </thead>
-
-                    <tbody>
-                        <th>REGIÃO CENTRO</th>
-                        <tr>
-                            <td> <a href="https://www.google.com/maps/place/R.+Apolônia+Viêira+de+Jesus,+91+-+Jardim+Leila,+Guarulhos+-+SP,+07120-060/@-23.4581796,-46.5232744,1016m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94cef54ed910c347:0xf51276be7a1626a3!8m2!3d-23.4581796!4d-46.5232744!16s%2Fg%2F11c4ddk7d2?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"
-                                    target="_blank">Paraventi: Rua Apolônia Vieira de Jesus, 91 (próximo ao CIESP) –
-                                    Jardim Leila</a></td>
-                        </tr>
-
-
-                        <th>REGIÃO VILA GALVÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Pev+Continental+-+Ponto+de+Entrega+Volunt%C3%A1ria/@-23.429686,-46.5570458,15z/data=!4m6!3m5!1s0x94cef544033a3cfd:0x1e722987c08f3854!8m2!3d-23.429686!4d-46.5570458!16s%2Fg%2F11gxmcsdpv?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"> Continental: Rua Valdimiro Laurentino Pêssoa, 655 (atrás do CEU  Continental) – Parque Continental II</a></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Ouvidor,+337+-+Parque+Santo+Antonio,+Guarulhos+-+SP,+07062-160/data=!4m2!3m1!1s0x94cef5a705ff6f73:0xaeb6a64e34e8a641?sa=X&ved=1t:242&ictx=111" target="_blank" rel="noopener noreferrer">Torres Tibagy: Rua Ouvidor 337 - Parque Santo Antonio;</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Dr.+Tim%C3%B3teo+Penteado,+977+-+Vila+Renata,+Guarulhos+-+SP,+07056-010/@-23.4626304,-46.5678184,17.75z/data=!4m5!3m4!1s0x94cef5bb928de5a5:0xc83a973b901754eb!8m2!3d-23.4626404!4d-46.5678054?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Timóteo Penteado: Avenida Faustino Ramalho, 977 - Vila Galvão. (apresentar comprovante
-                            de residência).</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/search/Iporanga:+Rua+Ad%C3%A9lia+Sadalla,+166-+Jd.+Luciara/@-23.4406373,-46.5332636,18.75z?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Iporanga: Rua Adélia Sadalla, 166- Jd. Luciara;</a></td>
-                        </tr>
-
-                        <th>REGIÃO TABOÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Centro+Esportivo+Jo%C3%A3o+do+Pulo/@-23.4397866,-46.517016,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8ad281ea215d:0x412d593ab26e5fc!8m2!3d-23.4397915!4d-46.5144411!16s%2Fg%2F1pzsxsvj9?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">João do Pulo: Rua São Tomás de Aquino, 61 – Jardim Divinolândia;</a></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Cabr%C3%A1lia,+100+-+Jardim+Bela+Vista,+Guarulhos+-+SP,+07132-440/@-23.4346846,-46.5161281,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8ad4794acea9:0xd79435908c1ee47!8m2!3d-23.4346895!4d-46.5135532!16s%2Fg%2F11h7v1rzf8?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Cabrália: Rua Cabrália, 100 (altura do número 292 da Rua Emilia de Castro Martins) –
-                                Jardim Bela Vista;</a></td>
-                        </tr>
-
-                        <th>REGIÃO SÃO JOÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/search/Santos+Dumont:+Estrada+do+Sabo%C3%B3,+795+%E2%80%93+Santos+Dumont/@-23.4051949,-46.464586,18z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Santos Dumont: Estrada do Saboó, 795 – Santos Dumont;</a></td>
-                        </tr>
-
-                        <th>REGIÃO CUMBICA</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Jo%C3%A3o+Bassi,+707+-+Jardim+Pres.+Dutra,+Guarulhos+-+SP,+07171-137/@-23.4149606,-46.4304766,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce899226204f03:0xbfde19f5189a1e7!8m2!3d-23.4149655!4d-46.4279017!16s%2Fg%2F11rd31d_zm?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Presidente Dutra: Avenida João Bassi, 707 (esquina com Rua Maria Paula Mota) – Jd.
-                            Presidente Dutra.</a></td>
-                        </tr>
-
-                        <th>REGIÃO PIMENTAS</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/search/Jurema:+Rua+Jacutinga,+470/@-23.4498844,-46.4201526,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Jurema: Rua Jacutinga, 470 (esquina com rua Guarapiranga) – Jurema;</a></td>
-                        </tr>
-
-                        <tr>
-                            <th class="space"></th>
-                        </tr>
-
-                        <tr>
-                            <th>Segunda a Sábado - das 7h às 19h</th>
-                        </tr>
-
-                        <th>REGIÃO CENTRO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Guarulhos,+34+-+Gopouva,+Guarulhos+-+SP,+07022-020/@-23.4687653,-46.5443769,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef5665e6e5027:0x98fe648bd084dd28!8m2!3d-23.4687702!4d-46.541802!16s%2Fg%2F11h2d4xs2y?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Gopoúva: Rua Guarulhos, 34 – Gopoúva;</a></td>
-                        </tr>
-
-                        <tr>
-                            <th class="space"></th>
-                        </tr>
-
-                        <tr>
-                            <th>ECOPONTOS COM HORÁRIO REGULAR:
-                                Segunda a sexta: das 8h15 às 16h
-                                Sábados: das 8h15 às 15h30</th>
-                        </tr>
-
-                        <th>REGIÃO CENTRO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Jo%C3%A3o+Bernardo+Medeiros,+800+-+Jardim+Bom+Clima,+Guarulhos+-+SP,+07197-010/@-23.4538553,-46.5158363,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8ab387ffaf65:0xd92351db7f03803a!8m2!3d-23.4538602!4d-46.5132614!16s%2Fg%2F11vr1s31b0?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Bom Clima: Rua João Bernardo de Medeiros, 800 (ao lado do Thomeuzão);</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Sold.+Estanislau+Wojcik,+26+-+Centro,+Guarulhos+-+SP,+07112-210/@-23.4710256,-46.5233044,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5fff513058fd:0xc0830a51fb609474!8m2!3d-23.4710305!4d-46.5207295!16s%2Fg%2F11c1bw4gdk?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Macedo: Rua Soldado Estanislau Wojcik, 26 (atrás do Corpo de Bombeiros) – Vila Sant
-                            Anna;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Pev+Ponte+Grande+-+Ponto+de+Entrega+Volunt%C3%A1ria/@-23.5083403,-46.5583787,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5f09e252ce91:0xa2ddd27197053e2!8m2!3d-23.5083452!4d-46.5558038!16s%2Fg%2F11ggs1xlt_?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Ponte Grande: Alameda Josefina L. Zamataro, 233 – Vila Zamataro;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Guilherme+Lino+dos+Santos,+349+-+Jardim+Flor+do+Campo,+Guarulhos+-+SP,+07190-010/@-23.4512384,-46.5065498,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8abbce70307b:0x6b159a497d529e9f!8m2!3d-23.4512433!4d-46.5039749!16s%2Fg%2F11gmz3dpdl?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Vila Barros: Rua Guilherme Lino dos Santos, 349 – Jardim Flor do Campo.</a></td>
-                        </tr>
-
-                        <th>REGIÃO VILA GALVÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Ipiranga,+543+-+Vila+Rosalia,+Guarulhos+-+SP,+07074-120/@-23.4484026,-46.5704448,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef44cc88bc2af:0xace4d45f763cca4e!8m2!3d-23.4484075!4d-46.5678699!16s%2Fg%2F11w7q7tlr3?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Vila Galvão: Rua Ipiranga,543 (altura do número 615 da avenida Pedro de Souza Lopes) –
-                            Vila Galvão;</a></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Pedro+de+Souza+Lopes,+S%C3%A3o+Paulo,+07074-000/@-23.4424404,-46.5668266,17.5z/data=!4m6!3m5!1s0x94cef44cd0635315:0xa64ad7dc6eaae0c3!8m2!3d-23.4430385!4d-46.5658375!16s%2Fg%2F1ptwqmllt?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Cabuçu: Avenida Pedro de Souza Lopes (em frente ao número 7800 - Escola Maria Helena
-                            Faria Lima e Cunha);</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Benjamin+Harris+Hunicutt,+1509+-+Portal+dos+Gramados,+Guarulhos+-+SP,+07124-000/@-23.433232,-46.5402651,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef4e728d7e21b:0x1d3598ff57ba6965!8m2!3d-23.4332369!4d-46.5376902!16s%2Fg%2F11c5d4v1ww?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Vila Rio: Avenida Benjamin Harris Hunnicutt,1509 - Vila Rio.</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Nestor+Cabral,+61+-+Jardim+Rosa+de+Franca,+Guarulhos+-+SP,+07081-100/@-23.4442722,-46.5557393,17z/data=!3m1!4b1!4m6!3m5!1s0x94cef500245a1e37:0x2e685980053ca09c!8m2!3d-23.4442771!4d-46.5531644!16s%2Fg%2F11w213ydw7?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Rosa de França: Rua Nestor Cabral, 61 - Jd. Rosa de França.</a></td>
-                        </tr>
-
-                        <th>REGIÃO TABOÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Justiniano+Salvador+dos+Santos,+269+-+Parque+Mikail,+Guarulhos+-+SP,+07142-460/@-23.4088576,-46.4967766,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8b142ece7d8b:0xce8171ffb74d8be2!8m2!3d-23.4088625!4d-46.4942017!16s%2Fg%2F11s8c_v7y8?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Mikail: Rua Justiniano Salvador dos Santos, 269 – Parque Mikail.</a></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://maps.app.goo.gl/qw1MBJkVcLdcEzSS8" target="_blank" rel="noopener noreferrer">Adriana: Rua Walter Pereira de Lima, 105 - Vila Sítio dos Morros;</a></td>
-                        </tr>
-
-                        <th>REGIÃO SÃO JOÃO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Med%C3%A9ia+-+Jardim+Pres.+Dutra,+Guarulhos+-+SP,+07242-153/@-23.4372143,-46.4275884,17z/data=!3m1!4b1!4m10!1m2!2m1!1sRua+Medeia+Escardino+Mariano,+311!3m6!1s0x94ce620a7ce91247:0x336a5a8aed2e1995!8m2!3d-23.4372193!4d-46.4227175!15sCiFSdWEgTWVkZWlhIEVzY2FyZGlubyBNYXJpYW5vLCAzMTGSAQVyb3V0ZeABAA!16s%2Fg%2F1ymsm_mmk?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Fortaleza: Rua Medeia Escardino Mariano, 311(ao lado do reservatório do SAAE) – Jardim
-                            Fortaleza;</a></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+Campos+Gerais,+163+-+Cidade+Serodio,+Guarulhos+-+SP,+07155-190/@-23.4172305,-46.4710449,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce8a4d8a37e84f:0x9947d88e6a48a533!8m2!3d-23.4172354!4d-46.46847?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Haroldo Veloso: Rua Campos Gerais, 163 (esquina com Rua Dalva de Oliveira) – Haroldo
-                            Veloso;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/ECOPONTO+BONDAN%C3%87A/@-23.4006666,-46.4562015,18z/data=!4m10!1m2!2m1!1sBondan%C3%A7a:+Rua+Ivan+Edmundo+Scarameli,+62+-+Jardim+Bondan%C3%A7a!3m6!1s0x94ce8b006e7111eb:0xba30f0b327cc640f!8m2!3d-23.4020324!4d-46.4550496!15sCjxCb25kYW7Dp2E6IFJ1YSBJdmFuIEVkbXVuZG8gU2NhcmFtZWxpLCA2MiAtIEphcmRpbSBCb25kYW7Dp2GSARpnYXJiYWdlX2NvbGxlY3Rpb25fc2VydmljZeABAA!16s%2Fg%2F11w8hdhjyd?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Bondança: Rua Ivan Edmundo Scarameli, 62 - Jardim Bondança;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Jos%C3%A9+Brumatti,+1857+-+Jardim+Santo+Expedito,+Guarulhos+-+SP,+07160-170/@-23.4079301,-46.444647,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce8a2ba977f887:0xb5196bc59ca5c381!8m2!3d-23.407935!4d-46.4420721!16s%2Fg%2F11j0nk0xzs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Lavras: Avenida José Brumati, 1857 – Lavras.</a></td>
-                        </tr>
-
-                        <th>REGIÃO CUMBICA</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/search/Cidade+Soimco:+Rua+Bento+Gon%C3%A7alves,+s%2Fn%C2%BA+(altura+do+n%C3%BAmero+119),+Cidade+Soimco;/@-23.4447737,-46.4687482,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Cidade Soimco: Rua Bento Gonçalves, s/nº (altura do número 119), Cidade Soimco;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Francisco+Xavier+Correa,+489+-+Res.+Parque+Cumbica,+Guarulhos+-+SP,+07174-340/@-23.4208101,-46.421598,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce89c189dcc797:0x2dd6d4f22e7a8f6e!8m2!3d-23.420815!4d-46.4190231?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">INOCOOP: Avenida Francisco Xavier Correia, 489 – Residencial Parque Cumbica;</a></td>
-                        </tr>
-
-                        <th>REGIÃO CUMBICA INDUSTRIAL </th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Av.+Birinepe,+99+-+Jardim+Cumbica,+Guarulhos+-+SP,+07240-050/@-23.4516043,-46.4449506,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce61f9ba01f6c7:0xdc08f90213f34edf!8m2!3d-23.4516092!4d-46.4423757!16s%2Fg%2F11tt23tzy8?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Jardim Cumbica: Avenida Berinepe, 99 - Jardim Cumbica.</a></td>
-                        </tr>
-
-                        <th>REGIÃO PIMENTAS</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/R.+It%C3%A1lia,+13+-+Parque+das+Nacoes,+Guarulhos+-+SP,+07243-313/@-23.4371386,-46.4116028,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce627a239bbb99:0x271631c2c7c17ba9!8m2!3d-23.4371435!4d-46.4090279!16s%2Fg%2F11c5l8lqyw?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Pimentas: Rua Itália, 13 – Parque das Nações.</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/ECOPONTO+LEBLON/@-23.4642112,-46.425842,17z/data=!4m10!1m2!2m1!1sLeblon:+Rua+Araci,+188+-+Jardim+Leblon!3m6!1s0x94ce63004fc3a0e9:0xb095ecbcb1201b54!8m2!3d-23.4666289!4d-46.422648!15sCiZMZWJsb246IFJ1YSBBcmFjaSwgMTg4IC0gSmFyZGltIExlYmxvbpIBGmdhcmJhZ2VfY29sbGVjdGlvbl9zZXJ2aWNl4AEA!16s%2Fg%2F11wbwjgq6g?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Leblon: Rua Araci, 188 - Jardim Leblon.</a></td>
-                        </tr>
-
-                        <th>REGIÃO BONSUCESSO</th>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Ecoponto+-+Pev+Ponte+Alta+(Ponto+de+Entrega+Volunt%C3%A1ria)/@-23.4641221,-46.4644666,13z/data=!4m10!1m2!2m1!1sPonte+Alta:+Rua+Zeferino+Alves+de+Oliveira,+n%C2%BA+530+-+Ponte+Alta+I!3m6!1s0x94ce89a8af9ddfe7:0x2ac4413fe6f8c7e5!8m2!3d-23.4020751!4d-46.4192073!15sCkJQb250ZSBBbHRhOiBSdWEgWmVmZXJpbm8gQWx2ZXMgZGUgT2xpdmVpcmEsIG7CuiA1MzAgLSBQb250ZSBBbHRhIElaQCI-cG9udGUgYWx0YSBydWEgemVmZXJpbm8gYWx2ZXMgZGUgb2xpdmVpcmEgbsK6IDUzMCBwb250ZSBhbHRhIGmSARZkZWJyaXNfcmVtb3ZhbF9zZXJ2aWNlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVIxYkRaSFdqQkJSUkFC4AEA-gEECF4QOA!16s%2Fg%2F11fhqm40_1?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Ponte Alta: Rua Zeferino Alves de Oliveira, nº 530 - Ponte Alta I;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/Eco+ponto+Bonsucesso/@-23.4090283,-46.4064394,15z/data=!4m10!1m2!2m1!1sNova+Bonsucesso+:+Rua+Remanso+esquina+com+Viela+Urga+-Vila+Nova+Bonsucesso!3m6!1s0x94ce89b064b1e673:0x73eb11ec21102dfb!8m2!3d-23.4082338!4d-46.3995718!15sCkpOb3ZhIEJvbnN1Y2Vzc28gOiBSdWEgUmVtYW5zbyBlc3F1aW5hIGNvbSBWaWVsYSBVcmdhIC1WaWxhIE5vdmEgQm9uc3VjZXNzb5IBDGdhcmJhZ2VfZHVtcOABAA!16s%2Fg%2F11y1s95hzq?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Nova Bonsucesso : Rua Remanso esquina com Viela Urga -Vila Nova Bonsucesso;</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://www.google.com/maps/place/ECOPONTO+JARDIM+%C3%81LAMO/@-23.4089882,-46.4064394,15z/data=!4m10!1m2!2m1!1s%C3%81lamo:+Rua+Gentil+da+Silva+Leite+Filho,+15+-+Jd.+%C3%81lamo!3m6!1s0x94ce89002a6a55d9:0xc6bdff15400d238c!8m2!3d-23.4090079!4d-46.3752563!15sCjjDgWxhbW86IFJ1YSBHZW50aWwgZGEgU2lsdmEgTGVpdGUgRmlsaG8sIDE1IC0gSmQuIMOBbGFtbyIDiAEBkgEaZ2FyYmFnZV9jb2xsZWN0aW9uX3NlcnZpY2XgAQA!16s%2Fg%2F11wbtvk_lf?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Álamo: Rua Gentil da Silva Leite Filho, 15 - Jd. Álamo.</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </section>
-
-        <footer id="contato">
-            <p> &copy;COPYRIGHT 2024 Thierry Gomes. Todos os direitos reservados.<a class="linkedin" href="https://www.linkedin.com/in/thierry-gomes-695631152" target="_blank"><img src="linkedin (2).png" alt="">
-        </a></p> 
-        </footer>
     </main>
 
-    <script>
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            const headerHeight = document.querySelector('header').offsetHeight;
+    <footer>
+        <p>&copy; 2024 E-DescarteCerto. Todos os direitos reservados.</p>
+    </footer>
 
-            window.scrollTo({
-                top: section.offsetTop - headerHeight - 170,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+    <script src="mapa.js"></script>
 
-    <script src="index.js"></script>
-
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk69CV6trhAJCOqmcLmfKvrXpoUvhIFcE&callback=initMap">
+        </script>
 </body>
 
 </html>

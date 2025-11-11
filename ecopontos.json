@@ -1,0 +1,308 @@
+[
+  {
+    "nome": "Paraventi",
+    "endereco": "Rua Apolônia Vieira de Jesus, 91 – Jardim Leila",
+    "regiao": "Paraventi",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.45817,
+    "lng": -46.52327
+  },
+  {
+    "nome": "Continental",
+    "endereco": "Rua Valdimiro Laurentino Pêssoa, 655 – Parque Continental II",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat":-23.42968,
+    "lng":-46.55704
+  },
+  {
+    "nome": "Torres Tibagy",
+    "endereco": "Rua Ouvidor 337 - Parque Santo Antonio",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.45736,
+    "lng": -46.55649
+  },
+  {
+    "nome": "Timóteo Penteado",
+    "endereco": "Avenida Faustino Ramalho, 977 - Vila Galvão",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "Apresentar comprovante de residência.",
+    "lat":-23.463,
+    "lng": -46.56808
+  },
+  {
+    "nome": "Iporanga",
+    "endereco": "Rua Adélia Sadalla, 166 - Jd. Luciara",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.44068,
+    "lng": -46.53221
+  },
+  {
+    "nome": "Cabrália",
+    "endereco": "Rua Cabrália, 100 - Jd. Bela Vista",
+    "regiao": "Taboão",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": 0.0,
+    "lng": 0.0
+  },
+  {
+    "nome": "Santos Dumont",
+    "endereco": "Estrada do Saboó, 795 – Santos Dumont",
+    "regiao": "São João",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.43468,
+    "lng": -46.51355
+  },
+  {
+    "nome": "Presidente Dutra",
+    "endereco": "Avenida João Bassi, 707 – Jd. Presidente Dutra",
+    "regiao": "Cumbica",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.41496,
+    "lng": -46.4279
+  },
+  {
+    "nome": "Jurema",
+    "endereco": "Rua Jacutinga, 470 – Jurema",
+    "regiao": "Pimentas",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.4497,
+    "lng": -46.41743
+  },
+  {
+    "nome": "Gopoúva",
+    "endereco": "Rua Guarulhos, 34 – Gopoúva",
+    "regiao": "Centro",
+    "horario": "Segunda a Sábado - das 7h às 19h",
+    "obs": "",
+    "lat": -23.46877,
+    "lng": -46.5418
+  },
+  {
+    "nome": "Bom Clima",
+    "endereco": "Rua João Bernardo de Medeiros, 800 (ao lado do Thomeuzão)",
+    "regiao": "Centro",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.45468,
+    "lng": -46.51303
+  },
+  {
+    "nome": "Macedo",
+    "endereco": "Rua Soldado Estanislau Wojcik, 26 – Vila Sant Anna",
+    "regiao": "Centro",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.47103,
+    "lng": -46.52072
+  },
+  {
+    "nome": "Ponte Grande",
+    "endereco": "Alameda Josefina L. Zamataro, 233 – Vila Zamataro",
+    "regiao": "Centro",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.50611,
+    "lng": -46.555
+  },
+  {
+    "nome": "Vila Barros",
+    "endereco": "Rua Guilherme Lino dos Santos, 349 – Jardim Flor do Campo",
+    "regiao": "Centro",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.45124,
+    "lng": -46.50397
+  },
+  {
+    "nome": "Vila Galvão",
+    "endereco": "Rua Ipiranga, 543 – Vila Galvão",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.4484,
+    "lng": -46.56786
+  },
+  {
+    "nome": "Parque Santo Antonio",
+    "endereco": "Rua Ouvidor, 337 - Parque Santo Antonio",
+    "regiao": "Vila Galvão",
+    "horario": "Fechado",
+    "obs": "Fechado por tempo indeterminado.",
+    "lat": -23.457575,
+    "lng": -46.5565744
+  },
+  {
+    "nome": "Cabuçu",
+    "endereco": "Avenida Pedro de Souza Lopes (em frente ao número 7800)",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.44384,
+    "lng": -46.56535
+  },
+  {
+    "nome": "Vila Rio",
+    "endereco": "Avenida Benjamin Harris Hunnicutt, 1509 - Vila Rio",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.43323,
+    "lng": -46.53769
+  },
+  {
+    "nome": "Rosa de França",
+    "endereco": "Rua Nestor Cabral, 61 - Jd. Rosa de França",
+    "regiao": "Vila Galvão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.44427,
+    "lng": -46.55316
+  },
+  {
+    "nome": "Mikail",
+    "endereco": "Rua Justiniano Salvador dos Santos, 269 – Parque Mikail",
+    "regiao": "Taboão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.40886,
+    "lng": -46.4942
+  },
+  {
+    "nome": "Adriana",
+    "endereco": "Rua Walter Pereira de Lima, 105 - Vila Sítio dos Morros",
+    "regiao": "Taboão",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.41969,
+    "lng": -46.52049
+  },
+  {
+    "nome": "Fortaleza",
+    "endereco": "Rua Medeia Escardna Mariano, 335 – Jardim Fortaleza",
+    "regiao": "São João",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.37836,
+    "lng": -46.45072
+  },
+  {
+    "nome": "Haroldo Veloso",
+    "endereco": "Rua Campos Gerais, 163 – Haroldo Veloso",
+    "regiao": "São João",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.41683,
+    "lng": -46.46858
+  },
+  {
+    "nome": "Bondança",
+    "endereco": "Rua Ivan Edmundo Scarameli, 62 - Jardim Bondança",
+    "regiao": "São João",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.40203,
+    "lng": -46.45504
+  },
+  {
+    "nome": "Lavras",
+    "endereco": "Avenida José Brumati, 1857 – Lavras",
+    "regiao": "São João",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.40793,
+    "lng": -46.44207
+  },
+  {
+    "nome": "Cidade Soimco",
+    "endereco": "Rua Bento Gonçalves, s/nº (altura do número 119)",
+    "regiao": "Cumbica",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.55327,
+    "lng": -46.5697
+  },
+  {
+    "nome": "INOCOOP",
+    "endereco": "Avenida Francisco Xavier Correia, 489 – Residencial Parque Cumbica",
+    "regiao": "Cumbica",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.42081,
+    "lng": -46.41902
+  },
+  {
+    "nome": "Jardim Cumbica",
+    "endereco": "Avenida Berinepe, 99 - Jardim Cumbica",
+    "regiao": "Cumbica Industrial",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.44985,
+    "lng": -46.44225
+  },
+  {
+    "nome": "Favela 3D",
+    "endereco": "Rua São Martinho 375 - Cidade satélite",
+    "regiao": "Cumbica Industrial",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.45269,
+    "lng": -46.46726
+  },
+  {
+    "nome": "Pimentas",
+    "endereco": "Rua Itália, 13 – Parque das Nações",
+    "regiao": "Pimentas",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.4372,
+    "lng": -46.40906
+  },
+  {
+    "nome": "Leblon",
+    "endereco": "Rua Araci, 188 - Jardim Leblon",
+    "regiao": "Pimentas",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.46662,
+    "lng": -46.42264
+  },
+  {
+    "nome": "Ponte Alta",
+    "endereco": "Rua Zeferino Alves de Oliveira, 530 - Ponte Alta I",
+    "regiao": "Bonsucesso",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.40207, 
+    "lng": -46.4192
+  },
+  {
+    "nome": "Nova Bonsucesso",
+    "endereco": "Rua Remanso esquina com Viela Urga - Vila Nova Bonsucesso",
+    "regiao": "Bonsucesso",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.40823, 
+    "lng": -46.39957
+  },
+  {
+    "nome": "Álamo",
+    "endereco": "Rua Gentil da Silva Leite Filho, 15 - Jd. Álamo",
+    "regiao": "Bonsucesso",
+    "horario": "Segunda a sexta: 8h15 às 16h | Sábados: 8h15 às 15h30",
+    "obs": "",
+    "lat": -23.409, 
+    "lng": -46.37525
+  }
+]
