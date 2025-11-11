@@ -1,3 +1,27 @@
+/**
+ * INÍCIO: CÓDIGO ADICIONADO
+ * Este código carrega o script do Google Maps dinamicamente,
+ * usando a chave do seu arquivo 'config.js'.
+ */
+function carregarScriptGoogleMaps() {
+  const script = document.createElement("script");
+  // Usa a variável GOOGLE_MAPS_API_KEY do config.js
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+}
+
+// Chama a função para carregar o mapa
+carregarScriptGoogleMaps();
+
+/**
+ * FIM: CÓDIGO ADICIONADO
+ * O restante do seu arquivo original permanece exatamente igual abaixo.
+ */
+
+// -----------------------------------------------------------------
+
 let mapa;
 let geocoder;
 let infoWindow;
@@ -88,7 +112,7 @@ function configurarBusca() {
             position: localizacao,
             map: mapa,
             title: "Sua Localização",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // (Você pode querer checar esse ícone)
           });
         } else {
           alert("Não foi possível encontrar este endereço: " + status);
