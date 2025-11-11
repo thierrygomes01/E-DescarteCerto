@@ -103,11 +103,8 @@ header .logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .busca-container p {
-  position: relative;
-  right: 11.3%;
   color: #ffffff;
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -117,8 +114,6 @@ header .logo {
   height: 2rem;
   padding: 10px;
   margin-top: 5%;
-  position: relative;
-  right: 17.4%;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -133,15 +128,12 @@ header .logo {
   width: 20%;
   height: 1.8rem;
   margin-top: 5%;
-  position: relative;
-  right: 34.2%;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: #ffffff;
   padding: 5px;
   border-radius: 9px;
   background-color: #4ca73e;
-  margin-left: -40px;
   border: none;
   cursor: pointer;
   transition: .2s linear;
