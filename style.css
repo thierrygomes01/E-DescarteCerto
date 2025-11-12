@@ -26,7 +26,7 @@ nav {
   display: flex;
   align-items: center;
 }
-header{
+header {
   margin-bottom: 1rem;
 }
 header .logo {
@@ -141,18 +141,57 @@ header .logo {
   background-color: #4ca73e;
   border: none;
   cursor: pointer;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 .busca-container .search:hover {
   background-color: #61c950;
 }
+.mapa-e-resultados-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  margin: 0 auto;
+  gap: 20px;
+}
 #mapa {
   height: 300px;
-  width: 84%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
+}
+#resultados-container {
+  display: none;
+  background-color: #20443c;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+#resultados-container.visivel {
+  display: block;
+}
+.resultados-container h3 {
+  font-family: "Roboto", sans-serif;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #4ca73e;
+  padding-bottom: 10px;
+}
+.resultados-container ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+.resultados-container li {
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+#resultados-container li strong {
+  color: #61c950;
+  font-size: 1.1rem;
 }
 .about {
   width: 95%;
@@ -194,13 +233,121 @@ header .logo {
 }
 footer {
   width: 100%;
-  height: 3rem;
-  font-size: clamp(0.8rem, 4vw, 2rem);
+  height: 5rem;
+  font-size: clamp(0.8rem, 3.5vw, 2rem);
   font-family: "Roboto", sans-serif;
   background-color: #20443c;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+.redes {
+  display: flex;
+  margin-top: 0.5rem;
+  gap: 0.4rem;
+}
+.redes a {
+  margin-left: 0.3rem;
+  text-decoration: none;
+}
+.redes a img {
+  width: clamp(1.5rem, 5vw, 5rem);
+  transition: 0.3s linear;
+}
+.redes a img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+}
+
+@media (min-width: 1024px) {
+  nav {
+    justify-content: space-around;
+    padding: 0 50px;
+  }
+  .logop {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    left: 15.6%;
+    display: flex;
+    align-items: center;
+  }
+  .logop p {
+    font-size: 1.5rem;
+  }
+  .logop .logo {
+    width: 10%;
+  }
+  .nav-links {
+    width: auto;
+    max-width: none;
+    margin-right: 16.5%;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding-top: 0;
+  }
+  .nav-links li {
+    margin: 0 15px;
+  }
+  .hamburger-menu,
+  #hamburguer-input {
+    display: none;
+  }
+  .busca-container {
+    width: 100%;
+    height: 25rem;
+  }
+  .busca-container p {
+    margin-top: 5rem;
+    font-size: 24px;
+  }
+  .busca-container input {
+    width: 30%;
+    height: 2rem;
+    padding: 1.2rem;
+    font-size: 18px;
+    border-radius: 2rem;
+  }
+  .busca-container .search {
+    width: 15%;
+    height: 2.5rem;
+    font-size: 16px;
+    border-radius: 2rem;
+  }
+  .mapa-e-resultados-wrapper {
+    width: 50%;
+    line-height: 1.9;
+  }
+  #mapa {
+    width: 100%;
+    height: 400px;
+    margin-top: 7rem;
+  }
+  .about {
+    width: 50%;
+  }
+  .descricao {
+    width: 50%;
+  }
+  footer {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  .redes a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+  }
+  .redes a img {
+    width: 1.2vw;
+    transition: 0.3s linear;
+  }
+  .redes a img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+  }
 }

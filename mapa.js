@@ -1,30 +1,17 @@
-/**
- * INÍCIO: CÓDIGO ADICIONADO
- * Este código carrega o script do Google Maps dinamicamente,
- * usando a chave do seu arquivo 'config.js'.
- */
 function carregarScriptGoogleMaps() {
   const script = document.createElement("script");
-  // Usa a variável GOOGLE_MAPS_API_KEY do config.js
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap&libraries=geometry`;
   script.async = true;
   script.defer = true;
   document.head.appendChild(script);
 }
 
-// Chama a função para carregar o mapa
 carregarScriptGoogleMaps();
-
-/**
- * FIM: CÓDIGO ADICIONADO
- * O restante do seu arquivo original permanece exatamente igual abaixo.
- */
-
-// -----------------------------------------------------------------
 
 let mapa;
 let geocoder;
 let infoWindow;
+let listaDeEcopontos = [];
 
 function initMap() {
   const centroGuarulhos = { lat: -23.4538, lng: -46.5333 };
@@ -47,9 +34,9 @@ async function carregarEcopontos() {
   try {
     const resposta = await fetch("ecopontos.json");
 
-    const ecopontos = await resposta.json();
+    listaDeEcopontos = await resposta.json();
 
-    ecopontos.forEach((ponto) => {
+    listaDeEcopontos.forEach((ponto) => {
       if (ponto.lat === 0.0 || ponto.horario === "Fechado") {
         return;
       }
@@ -90,6 +77,8 @@ function configurarBusca() {
   const botao = document.getElementById("buscar-btn");
   const input = document.getElementById("endereco-input");
 
+  const resultadosDiv = document.getElementById("resultados-container");
+
   botao.addEventListener("click", () => {
     const endereco = input.value;
 
@@ -101,22 +90,80 @@ function configurarBusca() {
     geocoder.geocode(
       { address: endereco + ", Guarulhos" },
       (results, status) => {
+
         if (status === "OK") {
-          const localizacao = results[0].geometry.location;
+          if (results[0].partial_match) {
+            alert(
+              "Não foi possível encontrar este endereço específico. Verifique o CEP ou endereço digitado."
+            );
+            resultadosDiv.classList.remove("visivel");
+          } else {
+            const localizacaoUsuario = results[0].geometry.location;
 
-          mapa.setCenter(localizacao);
+            mapa.setCenter(localizacaoUsuario);
+            mapa.setZoom(15);
 
-          mapa.setZoom(15);
+            new google.maps.Marker({
+              position: localizacaoUsuario,
+              map: mapa,
+              title: "Sua Localização",
+              icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            });
 
-          new google.maps.Marker({
-            position: localizacao,
-            map: mapa,
-            title: "Sua Localização",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png", // (Você pode querer checar esse ícone)
-          });
+            const ecopontosComDistancia = [];
+
+            listaDeEcopontos.forEach((ponto) => {
+              if (ponto.lat === 0.0 || ponto.horario === "Fechado") {
+                return;
+              }
+
+              const localizacaoEcoponto = new google.maps.LatLng(
+                ponto.lat,
+                ponto.lng
+              );
+
+              const distanciaEmMetros =
+                google.maps.geometry.spherical.computeDistanceBetween(
+                  localizacaoUsuario,
+                  localizacaoEcoponto
+                );
+
+              ecopontosComDistancia.push({
+                nome: ponto.nome,
+                distancia: distanciaEmMetros,
+              });
+            });
+
+            ecopontosComDistancia.sort((a, b) => a.distancia - b.distancia);
+
+            const maisProximos = ecopontosComDistancia.slice(0, 3);
+            console.log("Ecopontos mais próximos:", maisProximos);
+
+            const listaResultadosUL =
+              document.getElementById("lista-resultados");
+            listaResultadosUL.innerHTML = "";
+
+            if (maisProximos.length > 0) {
+              maisProximos.forEach((ponto) => {
+                const distanciaKm = (ponto.distancia / 1000).toFixed(1);
+
+                const itemLista = document.createElement("li");
+                itemLista.innerHTML = `<strong>${ponto.nome}</strong><br>Aprox. ${distanciaKm} km de distância`;
+
+                listaResultadosUL.appendChild(itemLista);
+              });
+            } else {
+              listaResultadosUL.innerHTML =
+                "<li>Não foi encontrado nenhum ecoponto próximo.</li>";
+            }
+
+            resultadosDiv.classList.add("visivel");
+          }
         } else {
           alert("Não foi possível encontrar este endereço: " + status);
+          resultadosDiv.classList.remove("visivel");
         }
+
       }
     );
   });
